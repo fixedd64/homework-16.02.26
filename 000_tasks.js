@@ -66,7 +66,12 @@
 
 */
 
-// let arr = [1,2,3,4,5,6,7,8,9]
+// let arr = [1,2,3,4,5,6,7,8,9];
+
+// arr.map(element => console.log(element));
+
+
+
 
 //------------------------------------------------------------------------------------------------------------
 
@@ -79,7 +84,13 @@
   Используйте метод reduce
 */
 
-// let arr = [1,2,3,4,5,6,7,8,9]
+
+// let arr = [1,2,3,4,5,6,7,8,9];
+// let sum = 0;
+
+// arr.map(item => sum += item);
+
+// console.log(sum);
 
 
 //------------------------------------------------------------------------------------------------------------
@@ -95,7 +106,18 @@
   Используйте метод reduce.
 */
 
-// let arr = [1,2,3,4,5,6,7,8,9]
+// let arr = [1,2,3,4,5,6,7,8,9];
+
+// const even = arr.reduce((acc, num) => {
+//   if (num % 2 === 0) acc.push(num);
+//   return acc;
+// }, []);
+
+// console.log(even);
+
+
+
+
 
 //------------------------------------------------------------------------------------------------------------
 
@@ -111,6 +133,14 @@
 
 // let arr = [1,2,3,4,5,6,7,8,9]
 
+// const even = arr.reduce((acc, num) => {
+//   if (num % 2 !== 0) acc.push(num);
+//   return acc;
+// }, []);
+
+// console.log(even); 
+
+
 //------------------------------------------------------------------------------------------------------------
 
 
@@ -123,7 +153,18 @@
   Используйте метод reduce.
 */
 
-// let arr = [1,2,3,4,5,6,7,8,9]
+// let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+// let result = arr.reduce((acc, num) => {
+//   if (num > 5) {
+//     acc.push(num);
+//   }
+//   return acc;
+// }, []);
+
+// console.log(result); 
+
+
 
 //------------------------------------------------------------------------------------------------------------
 
@@ -139,6 +180,17 @@
 
 // let arr = [1,2,3,4,5,6,7,8,9]
 
+// let result = arr.reduce((acc, num) => {
+//   if (num < 5) {
+//     acc.push(num);
+//   }
+//   return acc;
+// }, []);
+
+// console.log(result); 
+
+
+
 //------------------------------------------------------------------------------------------------------------
 
 // Задача 7
@@ -149,6 +201,17 @@
 
 
 // let arr = ['Lorem', 'ipsum', 'dolor', 'sit', 'amet', 'consectetur', 'adipisicing', 'elit', 'Voluptatem', 'sequi']
+
+
+// let result = arr.reduce((acc, item) => {
+//   if (item.length > 6) {                      // поміняв на 6
+//     acc.push(item);
+//   }
+//   return acc;
+// }, []);
+
+// console.log(result); 
+
 
 //------------------------------------------------------------------------------------------------------------
 
@@ -163,6 +226,18 @@
 
 
 // let arr = ['Lorem', 'ipsum', 'dolor', 'sit', 'amet', 'consectetur', 'adipisicing', 'elit', 'Voluptatem', 'sequi']
+
+// let result = arr.reduce((acc, str) => {
+//     if (str.length > 6) {                 // поміняв на 6
+//         acc.push(str);
+//     }
+//     return acc;
+// }, []);
+
+// console.log(result); 
+
+
+
 
 
 //------------------------------------------------------------------------------------------------------------
@@ -179,6 +254,17 @@
 
 // let arr = ['Lorem', 'ipsum', 'dolor', 'sit', 'amet', 'consectetur', 'adipisicing', 'elit', 'Voluptatem', 'sequi']
 
+
+// let result = arr.reduce((acc, str) => {
+//     if (str.length <= 3) {                 
+//         acc.push(str);
+//     }
+//     return acc;
+// }, []);
+
+// console.log(result); 
+
+
 //------------------------------------------------------------------------------------------------------------
 
 // Задача 10
@@ -194,6 +280,17 @@
 // let arr = ['Lorem', 'ipsum', 'dolor', 'sit', 'amet', 'consectetur', 'adipisicing', 'elit', 'Voluptatem', 'sequi']
 
 
+// let result = arr.reduce((acc, str) => {
+//     if (str.length == 5) {         
+//         acc.push(str);
+//     }
+//     return acc;
+// }, []);
+
+// console.log(result); 
+
+
+
 //------------------------------------------------------------------------------------------------------------
 
 // Задача 11
@@ -206,7 +303,20 @@
 */
 
 // let arr = ["London", "Paris", "Berlin", "Rome"];
-// const findCity = "name_city"; //(london или kharkiv)
+// const findCity = "kharkiv"; //(london или kharkiv)
+
+// let found = arr.reduce((acc, city) => {
+//     if (city.toLowerCase() === findCity.toLowerCase()) {
+//         return city;
+//     }
+//     return acc;
+// }, null);
+
+// if (found) {
+//     console.log(found);
+//     } else {
+//     console.log(`City ${findCity} not found`);
+// }
 
 //------------------------------------------------------------------------------------------------------------
 
@@ -219,6 +329,22 @@
 */
 
 // let arr = ["London", "Paris", "Berlin", "Rome"];
+
+// let found = arr.reduce((acc, city) => {
+// if (acc) return acc; 
+
+// if (city.length > 4) {
+//     return city;
+// }
+
+//     return null;
+// }, null);
+
+// if (found) {
+//     console.log(found);
+//     } else {
+//     console.log("City not found");
+// }
 
 
 
@@ -268,29 +394,109 @@
 
 // let users = [
 //   // [id, name,     age, isCar, address[city, country], typeDeveloper,  level,   salary]
-//   [ 0, "Ivan",      25, true,  [ "Kyiv", "Ukraine" ],     "FrontEnd",  "Junior", 1200],
-//   [ 1, "Oleh",      25, true,  [ "Kyiv", "Ukraine" ],     "FrontEnd",  "Junior", 1200],
-//   [ 2, "Sofia",     30, false, [ "Kharkiv", "Ukraine"  ], "FullStack", "Senior", 3500],
-//   [ 3, "Danil",     22, true,  [ "Kharkiv", "Ukraine"  ], "FrontEnd",  "Junior", 1700],
-//   [ 4, "Maxym",     28, true,  [ "Kharkiv", "Ukraine"  ], "BackEnd",   "Junior", 1700],
-//   [ 5, "Andrey",    35, false, [ "Kharkiv", "Ukraine"  ], "DevOps",    "Junior", 1700],
-//   [ 6, "Anna",      29, false, [ "Lviv", "Ukraine" ],     "FrontEnd",  "Junior", 1500],
-//   [ 7, "Artem",     26, true,  [ "Kyiv", "Ukraine" ],     "FullStack", "Middle", 3500],
-//   [ 8, "Ivan",      24, false, [ "Lviv", "Ukraine" ],     "DevOps",    "Junior", 1700],
-//   [ 9, "Igor",      27, true,  [ "Kharkiv", "Ukraine"  ], "FrontEnd",  "Junior", 1200],
-//   [10, "Iryna",     33, true,  [ "Kharkiv", "Ukraine"  ], "BackEnd",   "Middle", 3500],
-//   [11, "David",     31, true,  [ "Odessa", "Ukraine" ],   "BackEnd",   "Middle", 3500],
-//   [12, "Andrey",    23, false, [ "Kharkiv", "Ukraine"  ], "DataBase",  "Senior", 4000],
-//   [13, "Sofia",     30, true,  [ "Lviv", "Ukraine" ],     "BackEnd",   "Middle", 2500],
-//   [14, "Roman",     29, true,  [ "Kharkiv", "Ukraine"  ], "FullStack", "Senior", 3800],
-//   [15, "Mykola",    28, false, [ "Kharkiv", "Ukraine"  ], "BackEnd",   "Senior", 3200],
-//   [16, "Katya",     26, false, [ "Odessa", "Ukraine" ],   "FrontEnd",  "Middle", 2000],
-//   [17, "Oksana",    27, true,  [ "Kyiv", "Ukraine" ],     "DataBase",  "Middle", 2500],
-//   [18, "Anastasia", 25, false, [ "Kharkiv", "Ukraine"  ], "DevOps",    "Junior", 3800],
-//   [19, "Mykola",    22, true,  [ "Kharkiv", "Ukraine"  ], "FrontEnd",  "Senior", 3500],
-//   [20, "Olena",     24, true,  [ "Kyiv", "Ukraine" ],     "FrontEnd",  "Junior", 1700],
+//     [ 0, "Ivan",      25, true,  [ "Kyiv", "Ukraine" ],     "FrontEnd",  "Junior", 1200],
+//     [ 1, "Oleh",      25, true,  [ "Kyiv", "Ukraine" ],     "FrontEnd",  "Junior", 1200],
+//     [ 2, "Sofia",     30, false, [ "Kharkiv", "Ukraine"  ], "FullStack", "Senior", 3500],
+//     [ 3, "Danil",     22, true,  [ "Kharkiv", "Ukraine"  ], "FrontEnd",  "Junior", 1700],
+//     [ 4, "Maxym",     28, true,  [ "Kharkiv", "Ukraine"  ], "BackEnd",   "Junior", 1700],
+//     [ 5, "Andrey",    35, false, [ "Kharkiv", "Ukraine"  ], "DevOps",    "Junior", 1700],
+//     [ 6, "Anna",      29, false, [ "Lviv", "Ukraine" ],     "FrontEnd",  "Junior", 1500],
+//     [ 7, "Artem",     26, true,  [ "Kyiv", "Ukraine" ],     "FullStack", "Middle", 3500],
+//     [ 8, "Ivan",      24, false, [ "Lviv", "Ukraine" ],     "DevOps",    "Junior", 1700],
+//     [ 9, "Igor",      27, true,  [ "Kharkiv", "Ukraine"  ], "FrontEnd",  "Junior", 1200],
+//     [10, "Iryna",     33, true,  [ "Kharkiv", "Ukraine"  ], "BackEnd",   "Middle", 3500],
+//     [11, "David",     31, true,  [ "Odessa", "Ukraine" ],   "BackEnd",   "Middle", 3500],
+//     [12, "Andrey",    23, false, [ "Kharkiv", "Ukraine"  ], "DataBase",  "Senior", 4000],
+//     [13, "Sofia",     30, true,  [ "Lviv", "Ukraine" ],     "BackEnd",   "Middle", 2500],
+//     [14, "Roman",     29, true,  [ "Kharkiv", "Ukraine"  ], "FullStack", "Senior", 3800],
+//     [15, "Mykola",    28, false, [ "Kharkiv", "Ukraine"  ], "BackEnd",   "Senior", 3200],
+//     [16, "Katya",     26, false, [ "Odessa", "Ukraine" ],   "FrontEnd",  "Middle", 2000],
+//     [17, "Oksana",    27, true,  [ "Kyiv", "Ukraine" ],     "DataBase",  "Middle", 2500],
+//     [18, "Anastasia", 25, false, [ "Kharkiv", "Ukraine"  ], "DevOps",    "Junior", 3800],
+//     [19, "Mykola",    22, true,  [ "Kharkiv", "Ukraine"  ], "FrontEnd",  "Senior", 3500],
+//     [20, "Olena",     24, true,  [ "Kyiv", "Ukraine" ],     "FrontEnd",  "Junior", 1700],
 
 // ]
+
+// let id = 0;
+// let findId = users.find(item => item[0] === id);
+
+// if (findId) {
+//     console.log(findId);
+// } else {
+//     console.log(`User with ${id} isn't found`);
+// }
+
+
+
+
+// let age = 25; 
+// let findAge = users.find(item => item[2] === age);
+
+// if (findAge) {
+//     console.log(findAge);
+// } else {
+//     console.log(`User with age ${age} not found`);
+// }
+
+
+
+// let car = true;
+// let isCar = users.find(item => item[3] === car);
+
+// if (isCar) {
+//     console.log(isCar);
+// } else {
+//     console.log(`User doesn't have a car`);
+// }
+
+
+
+
+// let car = false;
+// let isCar = users.find(item => item[3] === car);
+
+// if (isCar) {
+//     console.log(isCar);
+// } else {
+//     console.log(`User doesn't have a car`);
+// }
+
+
+
+
+// let city = "Lviv";
+// let findCity = users.find(item => item[4][0].toLowerCase() === city.toLowerCase());
+
+// if (findCity) {
+//     console.log(findCity);
+// } else {
+//     console.log(`User with address ${city} not found`);
+// }
+
+// debugger
+
+
+
+// let developer = "DevOps";
+// let typeDeveloper = users.find(item => item[5].toLowerCase() === developer.toLowerCase());
+
+// if (typeDeveloper) {
+//     console.log(typeDeveloper);
+// } else {
+//     console.log(`User with ${developer} type not found`)
+// }
+
+
+
+// let salary = 2000;
+// let countSalary = users.find(item => item[7] >= salary);
+
+// if (countSalary) {
+//     console.log(countSalary);
+// } else {
+//     console.log(`User with salary more then ${salary} not found`);
+// }
 
 //------------------------------------------------------------------------------------------------------------
 
@@ -324,40 +530,128 @@
     если такого пользователя нет, выведите - "Пользователь с машиной не найден".
   
   - Напишите код, который выводит индекс первого пользователя по указанному адресу city,
-    если пользователя с указанным адресом отсутствует, выведите - "Пользователь с адресом <city> не найден".
+    если пользователя с указанным адресом отсутствует, выведите - "Пользователь с адресом <city> не найден".[4]
   
   - Напишите код, который выводит индекс первого пользователя с указанным типом разработчика (typeDeveloper),
-    если такого пользователя нет, выведите - "Пользователь с типом разработчика <developer> не найден".
+    если такого пользователя нет, выведите - "Пользователь с типом разработчика <developer> не найден".[5]
   
   - Напишите код, который выводит индекс первого пользователя с зарплатой (salary), большей или равной 2000.
-    если такого пользователя нет, выведите - "Пользователь с зарплата разработчика <salary> не найден".
+    если такого пользователя нет, выведите - "Пользователь с зарплата разработчика <salary> не найден".[7]
 */
 
 // let users = [
-//   // [id, name,     age, isCar, address[city, country], typeDeveloper,  level,   salary]
-//   [ 0, "Ivan",      25, true,  [ "Kyiv", "Ukraine" ],     "FrontEnd",  "Junior", 1200],
-//   [ 1, "Oleh",      25, true,  [ "Kyiv", "Ukraine" ],     "FrontEnd",  "Junior", 1200],
-//   [ 2, "Sofia",     30, false, [ "Kharkiv", "Ukraine"  ], "FullStack", "Senior", 3500],
-//   [ 3, "Danil",     22, true,  [ "Kharkiv", "Ukraine"  ], "FrontEnd",  "Junior", 1700],
-//   [ 4, "Maxym",     28, true,  [ "Kharkiv", "Ukraine"  ], "BackEnd",   "Junior", 1700],
-//   [ 5, "Andrey",    35, false, [ "Kharkiv", "Ukraine"  ], "DevOps",    "Junior", 1700],
-//   [ 6, "Anna",      29, false, [ "Lviv", "Ukraine" ],     "FrontEnd",  "Junior", 1500],
-//   [ 7, "Artem",     26, true,  [ "Kyiv", "Ukraine" ],     "FullStack", "Middle", 3500],
-//   [ 8, "Ivan",      24, false, [ "Lviv", "Ukraine" ],     "DevOps",    "Junior", 1700],
-//   [ 9, "Igor",      27, true,  [ "Kharkiv", "Ukraine"  ], "FrontEnd",  "Junior", 1200],
-//   [10, "Iryna",     33, true,  [ "Kharkiv", "Ukraine"  ], "BackEnd",   "Middle", 3500],
-//   [11, "David",     31, true,  [ "Odessa", "Ukraine" ],   "BackEnd",   "Middle", 3500],
-//   [12, "Andrey",    23, false, [ "Kharkiv", "Ukraine"  ], "DataBase",  "Senior", 4000],
-//   [13, "Sofia",     30, true,  [ "Lviv", "Ukraine" ],     "BackEnd",   "Middle", 2500],
-//   [14, "Roman",     29, true,  [ "Kharkiv", "Ukraine"  ], "FullStack", "Senior", 3800],
-//   [15, "Mykola",    28, false, [ "Kharkiv", "Ukraine"  ], "BackEnd",   "Senior", 3200],
-//   [16, "Katya",     26, false, [ "Odessa", "Ukraine" ],   "FrontEnd",  "Middle", 2000],
-//   [17, "Oksana",    27, true,  [ "Kyiv", "Ukraine" ],     "DataBase",  "Middle", 2500],
-//   [18, "Anastasia", 25, false, [ "Kharkiv", "Ukraine"  ], "DevOps",    "Junior", 3800],
-//   [19, "Mykola",    22, true,  [ "Kharkiv", "Ukraine"  ], "FrontEnd",  "Senior", 3500],
-//   [20, "Olena",     24, true,  [ "Kyiv", "Ukraine" ],     "FrontEnd",  "Junior", 1700],
+//     // [id, name,     age, isCar, address[city, country], typeDeveloper,  level,   salary]
+//     [ 0, "Ivan",      25, true,  [ "Kyiv", "Ukraine" ],     "FrontEnd",  "Junior", 1200],
+//     [ 1, "Oleh",      25, true,  [ "Kyiv", "Ukraine" ],     "FrontEnd",  "Junior", 1200],
+//     [ 2, "Sofia",     30, false, [ "Kharkiv", "Ukraine"  ], "FullStack", "Senior", 3500],
+//     [ 3, "Danil",     22, true,  [ "Kharkiv", "Ukraine"  ], "FrontEnd",  "Junior", 1700],
+//     [ 4, "Maxym",     28, true,  [ "Kharkiv", "Ukraine"  ], "BackEnd",   "Junior", 1700],
+//     [ 5, "Andrey",    35, false, [ "Kharkiv", "Ukraine"  ], "DevOps",    "Junior", 1700],
+//     [ 6, "Anna",      29, false, [ "Lviv", "Ukraine" ],     "FrontEnd",  "Junior", 1500],
+//     [ 7, "Artem",     26, true,  [ "Kyiv", "Ukraine" ],     "FullStack", "Middle", 3500],
+//     [ 8, "Ivan",      24, false, [ "Lviv", "Ukraine" ],     "DevOps",    "Junior", 1700],
+//     [ 9, "Igor",      27, true,  [ "Kharkiv", "Ukraine"  ], "FrontEnd",  "Junior", 1200],
+//     [10, "Iryna",     33, true,  [ "Kharkiv", "Ukraine"  ], "BackEnd",   "Middle", 3500],
+//     [11, "David",     31, true,  [ "Odessa", "Ukraine" ],   "BackEnd",   "Middle", 3500],
+//     [12, "Andrey",    23, false, [ "Kharkiv", "Ukraine"  ], "DataBase",  "Senior", 4000],
+//     [13, "Sofia",     30, true,  [ "Lviv", "Ukraine" ],     "BackEnd",   "Middle", 2500],
+//     [14, "Roman",     29, true,  [ "Kharkiv", "Ukraine"  ], "FullStack", "Senior", 3800],
+//     [15, "Mykola",    28, false, [ "Kharkiv", "Ukraine"  ], "BackEnd",   "Senior", 3200],
+//     [16, "Katya",     26, false, [ "Odessa", "Ukraine" ],   "FrontEnd",  "Middle", 2000],
+//     [17, "Oksana",    27, true,  [ "Kyiv", "Ukraine" ],     "DataBase",  "Middle", 2500],
+//     [18, "Anastasia", 25, false, [ "Kharkiv", "Ukraine"  ], "DevOps",    "Junior", 3800],
+//     [19, "Mykola",    22, true,  [ "Kharkiv", "Ukraine"  ], "FrontEnd",  "Senior", 3500],
+//     [20, "Olena",     24, true,  [ "Kyiv", "Ukraine" ],     "FrontEnd",  "Junior", 1700],
 
 // ]
+
+// let id = 3; 
+
+// let idIndex = users.findIndex(item => item[0] === id);
+
+// if (idIndex !== -1) {
+//     console.log(idIndex);
+// } else {
+//     console.log(`User with id ${id} not found`);
+// }
+
+
+//   - Напишите код, который выводит индекс первого пользователя по указанному возрасту (age),
+//     если пользователя с указанным возрастом отсутствует, выведите - "Пользователь с возрастом <age> не найден".
+
+// let age = 28;
+// let ageIndex = users.findIndex(item => item[2] === age);
+
+// if (ageIndex !== -1) {
+//     console.log(ageIndex);
+// } else { 
+//     console.log(`User with age ${age} not found`);
+// }
+
+
+
+
+
+//   - Напишите код, который выводит индекс первого пользователя, у которого есть машина (isCar равно true),
+//     если такого пользователя нет, выведите - "Пользователь с машиной не найден".[3]
+
+// let car = true;
+// let carIndex = users.findIndex(item => item[3] === car);
+
+// if (carIndex !== -1) {
+//     console.log(carIndex)
+// } else {
+//     console.log(`User with car ${car} not found`)
+// }
+
+
+
+
+
+//   - Напишите код, который выводит индекс первого пользователя по указанному адресу city,
+//     если пользователя с указанным адресом отсутствует, выведите - "Пользователь с адресом <city> не найден".[4]
+
+// let city = "Lviv";
+// let cityIndex = users.findIndex(item => item[4][0].toLowerCase() === city.toLowerCase());
+
+// if (cityIndex !== -1) {
+//     console.log(cityIndex)
+// } else {
+//     console.log(`User in ${city} not found`)
+// }
+
+
+
+
+
+//   - Напишите код, который выводит индекс первого пользователя с указанным типом разработчика (typeDeveloper),
+//     если такого пользователя нет, выведите - "Пользователь с типом разработчика <developer> не найден".[5]
+ 
+// let developer = "DevOps";
+// let developerIndex = users.findIndex(item => item[5].toLowerCase() === developer.toLowerCase());
+
+// if (developerIndex !== -1) {
+//     console.log(developerIndex);
+// } else {
+//     console.log(`User with developer type ${developer} not found`)
+// }
+
+
+
+//   - Напишите код, который выводит индекс первого пользователя с зарплатой (salary), большей или равной 2000.
+//     если такого пользователя нет, выведите - "Пользователь с зарплата разработчика <salary> не найден".[7]
+
+// let salary = "1500";
+// let salaryIndex = users.findIndex(item => item[7] === salary);
+
+// if (salaryIndex !== -1) {
+//     console.log(salaryIndex);
+// } else {
+//     console.log(`User with salary ${salary} not found`)
+// }
+
+
+
 
 //------------------------------------------------------------------------------------------------------------
 
@@ -375,7 +669,36 @@
   Используйте метод reduce для выполнения задач.
 */
 
-// let arr1 = [1,2,3,4,5,6,7,8,9]
+// let arr1 = [1,2,3,4,5,6,7,8,9];
+
+
+// let isEven = arr1.filter(evenItem => evenItem % 2 === 0);
+
+// if (isEven) {
+//     console.log(isEven);
+// } else {
+//     console.log(`Numers are not even`)
+// }
+
+
+
+// let isOdd = arr1.filter(oddItem => oddItem % 2 !== 0);
+
+// if (isOdd) {
+//     console.log(isOdd);
+// } else {
+//     console.log(`Numers are not even`)
+// }
+
+
+
+// let isThree = arr1.filter(threeItem => threeItem % 3 === 0);
+
+// if (isThree) {
+//     console.log(isThree);
+// } else {
+//     console.log(`Numers are not multiples to three`)
+// }
 
 //------------------------------------------------------------------------------------------------------------
 
@@ -394,6 +717,24 @@
 */
 
 // let arr1 = [-1,1,2,-3,4,-5,6,-7,-8,9, -10]
+
+// let isPositive = arr1.filter(positiveItem => positiveItem >= 0);
+
+// if (isPositive) {
+//     console.log(isPositive);
+// } else {
+//     console.log(`numbers are not positive`);
+// }
+
+
+
+// let isNegative = arr1.filter(negativeItem => negativeItem <= 0);
+
+// if (isNegative) {
+//     console.log(isNegative);
+// } else {
+//     console.log(`numbers are not negative`);
+// }
 
 
 //------------------------------------------------------------------------------------------------------------
@@ -415,6 +756,34 @@
 
 // let arr = ['Lorem', 'ipsum', 'dolor', 'sit', 'amet', 'consectetur', 'adipisicing', 'elit', 'Voluptatem', 'sequi']
 
+// let moreFour = arr.filter(fourItem => fourItem.length >= 4)
+
+// if (moreFour) {
+//     console.log(moreFour)
+// } else {
+//     console.log(`No words have nore then 4 symbols`)
+// }
+
+
+
+// let lessFour = arr.filter(fourItem => fourItem.length <= 4)
+
+// if (lessFour) {
+//     console.log(lessFour)
+// } else {
+//     console.log(`No words have less then 4 symbols`)
+// }
+
+
+
+// let fiveSix = arr.filter(equalItem => equalItem.length === 5 || equalItem.length === 6);
+
+// if (fiveSix) {
+//     console.log(fiveSix)
+// } else {
+//     console.log(`No words are equal to 5 or 6 symbols`)
+// }
+
 //------------------------------------------------------------------------------------------------------------
 
 // filter
@@ -431,6 +800,8 @@
 
 
 // let arr = ['Lorem', 'ipsum', 'dolor', 'sit', 'amet', 'consectetur', 'adipisicing', 'elit', 'Voluptatem', 'sequi']
+
+
 
 //------------------------------------------------------------------------------------------------------------
 
@@ -449,6 +820,25 @@
 
 
 // let arr = ['Lorem', 'ipsum', 'dolor', 'sit', 'amet', 'consectetur', 'adipisicing', 'elit', 'Voluptatem', 'sequi']
+
+// let hasAorO = arr.reduce((acc, item) => {
+//     if (item.includes('a') || item.includes('o')) {
+//         acc.push(item);
+//     }
+//     return acc;
+// }, []);
+
+// console.log(hasAorO);
+
+
+// let noAorO = arr.reduce((acc, item) => {
+//     if (!item.includes('a') && !item.includes('o')) {
+//         acc.push(item);
+//     }
+//     return acc;
+// }, []);
+
+// console.log(noAorO);
 
 //------------------------------------------------------------------------------------------------------------
 
