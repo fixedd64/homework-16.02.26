@@ -1290,7 +1290,10 @@ salary - число, зарплата пользователя
 
 // let arr = [1,2,3,4,5,6,7,8,9]; 
 
-// Результата [2, 4, 6, 8, 10, 12, 14, 16, 18];
+// let res = arr.map(item => item * 2);
+
+// console.log(res);
+// Результат [2, 4, 6, 8, 10, 12, 14, 16, 18];
 
 
 //------------------------------------------------------------------------------------------------------------
@@ -1304,10 +1307,21 @@ salary - число, зарплата пользователя
   Напишите код, котоырй выводит новый массив, где элемент массива уменьшен на -1, если явл НЕ четным
 */
 
-// let arr = [1,2,3,4,5,6,7,8,9]
+// let arr1 = [1,2,3,4,5,6,7,8,9]
 
-// Результата +1: [1, 3, 3, 5, 5, 7, 7, 9, 9]
-// Результата -1: [0, 2, 2, 4, 4, 6, 6, 8, 8] 
+// const newArr1 = arr1.map(num => num % 2 === 0 ? num + 1 : num);
+
+// console.log(newArr1);
+
+
+// let arr2 = [1,2,3,4,5,6,7,8,9]
+
+// const newArr2 = arr2.map(num => num % 2 !== 0 ? num - 1 : num);
+
+// console.log(newArr2);
+
+// Результат +1: [1, 3, 3, 5, 5, 7, 7, 9, 9]
+// Результат -1: [0, 2, 2, 4, 4, 6, 6, 8, 8] 
 
 
 //------------------------------------------------------------------------------------------------------------
@@ -1321,10 +1335,19 @@ salary - число, зарплата пользователя
   Напишите код, котоырй выводит новый массив, где  элемент массива делен на 2, если явл НЕ четным
 */
 
-// let arr = [1,2,3,4,5,6,7,8,9]
+// let arr = [1,2,3,4,5,6,7,8,9];
 
-// Результата *2: [1, 4, 3, 8, 5, 12, 7, 16, 9]
-// Результата /2: [0.5, 2, 1.5, 4, 2.5, 6, 3.5, 8, 4.5]
+// const newArr1 = arr.map(num => num % 2 === 0 && num !== 0 ? num * 2 : num);
+
+// console.log(newArr1);
+
+
+// const newArr2 = arr.map(num => num % 2 !== 0 && num !== 0 ? num / 2 : num);
+
+// console.log(newArr2);
+
+// Результат *2: [1, 4, 3, 8, 5, 12, 7, 16, 9]
+// Результат /2: [0.5, 2, 1.5, 4, 2.5, 6, 3.5, 8, 4.5]
 
 
 //------------------------------------------------------------------------------------------------------------
@@ -1341,8 +1364,8 @@ salary - число, зарплата пользователя
 
 // let arr = ['Lorem', 'ipsum', 'dolor', 'sit', 'amet', 'consectetur', 'adipisicing', 'elit', 'Voluptatem', 'sequi']
 
-// Результата 1: ['Lorem', 'Ipsum', 'Dolor', 'Sit', 'Amet', 'Consectetur', 'Adipisicing', 'Elit', 'Voluptatem', 'Sequi']
-// Результата 2: ['LoreM', 'IpsuM', 'DoloR', 'SiT', 'AmeT', 'ConsectetuR', 'AdipisicinG', 'EliT', 'VoluptateM', 'SequI']
+// Результат 1: ['Lorem', 'Ipsum', 'Dolor', 'Sit', 'Amet', 'Consectetur', 'Adipisicing', 'Elit', 'Voluptatem', 'Sequi']
+// Результат 2: ['LoreM', 'IpsuM', 'DoloR', 'SiT', 'AmeT', 'ConsectetuR', 'AdipisicinG', 'EliT', 'VoluptateM', 'SequI']
 
 //------------------------------------------------------------------------------------------------------------
 
@@ -1359,8 +1382,8 @@ salary - число, зарплата пользователя
 
 // let arr = ['Lorem', 'ipsum', 'dolor', 'sit', 'amet', 'consectetur', 'adipisicing', 'elit', 'Voluptatem', 'sequi']
 
-// Результата 1: ['Lorem', 'Ipsum', 'Dolor', 'Sit', 'Amet', 'Consectetur', 'Adipisicing', 'Elit', 'Voluptatem', 'Sequi']
-// Результата 2: ['LoreM', 'IpsuM', 'DoloR', 'SiT', 'AmeT', 'ConsectetuR', 'AdipisicinG', 'EliT', 'VoluptateM', 'SequI']
+// Результат 1: ['Lorem', 'Ipsum', 'Dolor', 'Sit', 'Amet', 'Consectetur', 'Adipisicing', 'Elit', 'Voluptatem', 'Sequi']
+// Результат 2: ['LoreM', 'IpsuM', 'DoloR', 'SiT', 'AmeT', 'ConsectetuR', 'AdipisicinG', 'EliT', 'VoluptateM', 'SequI']
 
 
 
